@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+:root {
+    --cor-de-fundo: #3A324A;
+    --cor-de-fundo-btn: #4a405e;
+    --cor-da-caixa: #4b4469;
+    --texto: #7DFAE7;
+    --texto-btn: #8cf1e2;
+    --bordas-escuras: #15121b;
+    --bordas-claras: #2A2436;
+    --texto-clicado: #65b6ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-de-fundo);
+    color: var(--texto);
+    font-family: "Kode Mono", monospace;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+#txtnum {
+    width: calc(100vw / 6);
+    height: 2rem;
+    font-size: 1.7rem;
+    font-family: "Kode Mono", monospace;
+    background-color: var(--cor-da-caixa);
+    color: var(--texto);
+    border-top: 2px solid var(--bordas-escuras);
+    border-left: 2px solid var(--bordas-escuras);
+    border-right: 2px solid var(--bordas-claras);
+    border-bottom: 2px solid var(--bordas-claras);
+}
+
+
+#button {
+    width: 5rem;
+    height: 2rem;
+    background-color: wheat;
+    border: black;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+#button:hover {
+    background-color: var(--cor-de-fundo-btn);
+    color: var(--);
+    transition: .4s;
+    border-top: 2px solid var(--bordas-escuras);
+    border-left: 2px solid var(--bordas-escuras);
+    border-right: 2px solid var(--bordas-claras);
+    border-bottom: 2px solid var(--bordas-claras);
+}
+
+.spnresult {
+    display: none;
+}
+
+.spnresult h1 {
+    margin-top: 18px;
+}
+
+.spnresult.ativo {
+    height: 160px;
+    display: block;
+    font-size: 50px;
+    align-content: center;
+    text-align: center;
+    background-color: var(--cor-da-caixa);
+    max-width: 750px;
+    width: 75%;
+    margin-top: 30px;
+    display: block;
+    border-top: 2px solid var(--bordas-claras);
+    border-left: 2px solid var(--bordas-claras);
+    border-right: 2px solid var(--bordas-escuras);
+    border-bottom: 2px solid var(--bordas-escuras);
+    border-radius: 40px;
+}
+
+.spnresult.ativo h5 {
+    color: red;
+    font-size: 70px;
+}
+
+.spnresult.ativo h4 {
+    font-size: 70px;
+    color: rgb(32, 250, 32);
+}
+
+.container {
+    padding: 10px;
+    gap: 16px;
+}
+
+.container label {
+    font-size: 3rem;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--texto-clicado);
+}
+
+#logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 50px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bordas-escuras)
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .8rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+#button {
+    font-family: "Kode Mono", monospace;
+    font-size: 24px;
+    background-color: var(--cor-da-caixa);
+    color: var(--texto);
+    width: 30%;
+    border-top: 2px solid var(--bordas-claras);
+    border-left: 2px solid var(--bordas-claras);
+    border-right: 2px solid var(--bordas-escuras);
+    border-bottom: 2px solid var(--bordas-escuras);
+    border-radius: 40px;
+}
+
+@media (max-width:768px) {
+
+    #btn-mobile {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        right: 0px;
+        background: var(--bordas-escuras);
+        z-index: 1000;
+        transition: .1s;
+        height: 0px;
+        visibility: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid var(--bordas-claras);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: var(--texto);
+        font-family: "Kode Mono", monospace;
+    }
+
+    #hamburger {
+        color: var(--texto);
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        position: relative;
+        transition: .1s
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+}

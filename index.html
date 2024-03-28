@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <title>Página Teste</title>
+</head>
+
+<body>
+    <header id="header">
+        <a id="logo" href="">KauanRamos</a>
+        <nav id="nav">
+            <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="https://github.com/KauanARamos">Github</a></li>
+                <li><a href="https://twitter.com/PudimAtomicuo">Twitter</a></li>
+                <li><a href="https://www.youtube.com/@pudimatomico_">Youtube</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="container">
+        <label for="txtnum" class="txtnum">Detector de números pares e ímpares</label>
+        <input type="text" id="txtnum" value="0"></input>
+
+        <input id="button" type="Button" value="Este número é par ou ímpar?" onclick="test()"></input>
+
+        <span id="spnresult" class="spnresult">Enter an Interger number</span>
+    </div>
+</body>
+
+</html>
