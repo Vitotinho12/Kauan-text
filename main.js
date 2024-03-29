@@ -1,4 +1,4 @@
-function test() {
+function alert() {
     var num = Number(document.getElementById("txtnum").value);
 
     if (num % 2 == 0) {
@@ -15,3 +15,10 @@ function test() {
     }
 
 };
+const input = document.getElementById('txtnum');
+
+input.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        alert()
+    }
+})
